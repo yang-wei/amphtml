@@ -20,8 +20,8 @@ limitations under the License.
 
 ```html
 <amp-ad width="320" height="50"
-    type="zucks"
-    src="https://j.zucks.net.zimg.jp/j?f={id}">
+      type="zucks"
+      data-frame_id="{FRAME_ID}">
 </amp-ad>
 ```
 
@@ -30,4 +30,4 @@ limitations under the License.
 For more information, please [contact Zucks](https://zucks.co.jp/contact/).
 
 Supported parameters:
-- src
+- data-frame_id

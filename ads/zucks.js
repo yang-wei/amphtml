@@ -14,14 +14,13 @@
  * limitations under the License.
  */
 
-import {writeScript, validateSrcPrefix} from '../3p/3p';
+import {validateData, writeScript} from '../3p/3p';
 
 /**
  * @param {!Window} global
  * @param {!Object} data
  */
 export function zucks(global, data) {
-  const src = data.src;
-  validateSrcPrefix('https://j.zucks.net.zimg.jp/', src);
-  writeScript(global, src);
+  validateData(data, ['frame_id']);
+  writeScript(global, `https://j.zucks.net.zimg.jp/j?f=${data.frame_id}`);
 }
